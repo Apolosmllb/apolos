@@ -13,7 +13,7 @@ export const Navbar = () =>{
     const handleClick = ():void => setNav(!nav);
 
     return(
-        <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#161616] text-gray-300 shadow-xl">
+        <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#233250] text-gray-300 shadow-xl">
             <div>
                 <img src={logo} alt='logo img' style={{width: '50px'}} />
             </div>
