@@ -8,7 +8,7 @@ export const Home = () =>{
             {/**Container**/}
             <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
                 <p>Hi, my name is</p>
-                <h1>Miner Lozano</h1>
+                <h1>Apolos</h1>
                 <h2>I'm a full Stack developer</h2>
             </div>
         </div>
