@@ -14,3 +14,23 @@
         @apply cursor-pointer;
     }
 }
+.pipe-effect{
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    width: 90%;
+    animation: typing 3s steps(15), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {border-color: transparent}
+}
