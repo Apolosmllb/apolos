@@ -2,6 +2,20 @@ import {AiOutlineDownload} from 'react-icons/ai'
 
 
 export const Home = () =>{
+    const onButtonClick = () => {
+        fetch('CV-Miner.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'CV-Miner.pdf';
+                alink.click();
+            })
+        })
+    }
+
     return(
         <div  className="w-full h-screen bg-[#011226]">
             {/**Container**/}
@@ -17,12 +31,16 @@ export const Home = () =>{
                 </p>
                 <span className='text-[#B1FA96] pb-5'>&lt;/div&gt;</span>
                 <div>
-                    <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-white hover:border-white hover:text-black'>
-                        Download CV
-                        <span>
-                            <AiOutlineDownload/>
-                        </span>
-                    </button>
+                    <a href='CV-Miner.pdf'
+                        download='CV-Miner.pdf'>
+                        <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-white hover:border-white hover:text-black'
+                        >
+                            Download CV
+                            <span>
+                                <AiOutlineDownload/>
+                            </span>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
